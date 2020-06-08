@@ -38,6 +38,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:onClick="btnBack"
         android:text="開啟另一個activity"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
