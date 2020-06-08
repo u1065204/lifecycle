@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(myListener);
         button3.setOnClickListener(myListener);
 
-        Toast.makeText(getApplicationContext(), "onCreate", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "onCreate", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -62,12 +62,12 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()){
                 case  R.id.button:
-                    Uri uri = uri.parse("tel:0999999999");
+                    Uri uri = Uri.parse("tel:0999999999");
                     Intent intent = new Intent(Intent.ACTION_DIAL,uri);
                     startActivity(intent);
                     break;
                 case  R.id.button2:
-                    Intent intent1 = new Intent(MainActivity.this,SecondActivity.);
+                    Intent intent1 = new Intent(MainActivity.this,SecondActivity.class);
                     startActivity(intent1);
                     break;
                 case  R.id.button3:
