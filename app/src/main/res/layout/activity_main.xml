@@ -25,6 +25,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:onClick="btntel"
         android:text="呼叫撥號按鈕"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

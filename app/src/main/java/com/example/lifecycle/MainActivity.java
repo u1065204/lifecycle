@@ -1,6 +1,7 @@
 package com.example.lifecycle;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
         //設定button click 事件共用的傾聽 mylistener
-        button.setOnClickListener(myListener);
-
         button.setOnClickListener(myListener);
         button2.setOnClickListener(myListener);
         button3.setOnClickListener(myListener);
@@ -58,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"onDestroy",Toast.LENGTH_LONG).show();
     }
 
-    private Button.OnDragListener myListener = new Button.OnClickListener(){
+    private Button.OnClickListener myListener = new Button.OnClickListener(){
         @Override
         public void onClick(View v) {
-            switch (view.getId()){
+            switch (v.getId()){
                 case  R.id.button:
-                    Uri uri = uri.paese("tel:0999999999");
+                    Uri uri = uri.parse("tel:0999999999");
                     Intent intent = new Intent(Intent.ACTION_DIAL,uri);
                     startActivity(intent);
                     break;
